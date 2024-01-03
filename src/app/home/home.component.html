@@ -1,0 +1,17 @@
+<main class="mt-5">
+	<div class="container">
+
+		<!-- search -->
+		<div class="input-group">
+			<div class="form-outline" data-mdb-input-init>
+				<input type="search" #search class="form-control" placeholder="Product name" />
+			</div>
+			<button type="button" class="btn btn-primary" (click)="searchFunc(search.value)">Search</button>
+		</div>
+
+		<!-- cards -->
+		<div class="cards row">
+			<card (click)="navigateToDetaile(item.id)" class="col-3 my-3" *ngFor="let item of filtredProducts" [card]="item"></card>
+		</div>
+	</div>
+</main>
