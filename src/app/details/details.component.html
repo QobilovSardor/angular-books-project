@@ -1,1 +1,27 @@
-<p>details works!</p>
+<div class="container mt-5">
+	<button [routerLink]="['']" class="border-0 bg-info text-white d-block my-4 pb-1 px-3" style="font-size: 30px;">&#8249;</button>
+	<img class="object-fit-contain border" [src]="card?.cardImg" alt={{card?.cardTitle}} width="300" height="300">
+
+	<div class="get-info">
+		<h2 class="my-4">General Info</h2>
+
+		<div class="table-responsive">
+			<table class="table table-striped table-product">
+				<tbody>
+					<tr>
+						<td width="390">Book name</td>
+						<td>{{card?.cardTitle}}</td>
+					</tr>
+					<tr>
+						<td>Book description</td>
+						<td>{{card?.cardDescription}}</td>
+					</tr>
+					<tr>
+						<td>Price</td>
+						<td>{{card?.cardPrice}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>

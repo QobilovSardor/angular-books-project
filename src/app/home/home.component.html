@@ -11,7 +11,8 @@
 
 		<!-- cards -->
 		<div class="cards row">
-			<card (click)="navigateToDetaile(item.id)" class="col-3 my-3" *ngFor="let item of filtredProducts" [card]="item"></card>
+			<card [routerLink]="['details', item.id]" class="col-3 my-3" *ngFor="let item of filtredProducts" [card]="item">
+			</card>
 		</div>
 	</div>
 </main>

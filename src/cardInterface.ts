@@ -4,4 +4,5 @@ export interface Card {
 	cardDescription: string;
 	cardButtonName: string;
 	cardImg: string;
+	cardPrice: number;
 }
