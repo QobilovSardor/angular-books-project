@@ -7,8 +7,8 @@ import { Router } from '@angular/router';
 	selector: 'app-home',
 	templateUrl: './home.component.html',
 })
+
 export class HomeComponent {
-	[x: string]: any;
 	/**
 	 * 
 	 */
@@ -37,6 +37,8 @@ export class HomeComponent {
 			console.log(item.cardTitle.includes(text.toLowerCase()))
 			item.cardTitle.toLocaleLowerCase().includes(text.toLowerCase())
 		})
+		console.log(text);
+		
 	}
 
 	/**
