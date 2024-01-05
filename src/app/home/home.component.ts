@@ -30,15 +30,9 @@ export class HomeComponent {
 	 * @param text 
 	 */
 	searchFunc(text: string) {
-		// this.filtredProducts = this.cardService.getCardService().filter((item) =>
-		// 	item.cardTitle.toLowerCase().includes(text.toLocaleLowerCase())
-		// )
-		this.filtredProducts = this.cards.filter((item) => {
-			console.log(item.cardTitle.includes(text.toLowerCase()))
-			item.cardTitle.toLocaleLowerCase().includes(text.toLowerCase())
-		})
-		console.log(text);
-		
+		this.filtredProducts = this.cards.filter((item) => (
+			item.cardTitle.toLowerCase().includes(text.toLowerCase())
+		))
 	}
 
 	/**
