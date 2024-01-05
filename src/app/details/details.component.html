@@ -1,5 +1,6 @@
 <div class="container mt-5">
-	<button [routerLink]="['']" class="border-0 bg-info text-white d-block my-4 pb-1 px-3" style="font-size: 30px;">&#8249;</button>
+	<button [routerLink]="['']" class="border-0 bg-info text-white d-block my-4 pb-1 px-3"
+		style="font-size: 30px;">&#8249;</button>
 	<img class="object-fit-contain border" [src]="card?.cardImg" alt={{card?.cardTitle}} width="300" height="300">
 
 	<div class="get-info">
@@ -23,5 +24,23 @@
 				</tbody>
 			</table>
 		</div>
+
+		<form class="mt-5 w-50" [formGroup]="form" (submit)="submit()	">
+			<div class="mb-3">
+				<label for="" class="form-label">Name</label>
+				<input type="text" name="name" class="form-control" placeholder="Enter name" aria-describedby="helpId"
+					formControlName="name" />
+			</div>
+
+			<div class="mb-3">
+				<label for="" class="form-label">Name</label>
+				<input type="text" name="comment" class="form-control" placeholder="Enter text" aria-describedby="helpId"
+					formControlName="comment" />
+			</div>
+			<div class="mb-3">
+				<button type="submit" class="btn btn-success">Submit</button>
+			</div>
+
+		</form>
 	</div>
 </div>
